@@ -17,6 +17,8 @@ theme: /
     state: Start
         q!: $regex</start>
         q: ($hi/$hello)
+        script:
+            $jsapi.startSession()
         random:
             a: Здравствуйте!
             a: Добрый день!
