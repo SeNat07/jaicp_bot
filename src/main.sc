@@ -17,7 +17,7 @@ theme: /
             a: Приветствую!
         go!: /Service/SuggestHelp
 
-    state: NoMatch
+    state: NoMatch || noContext = true
         event!: noMatch
         a: Простите, я не понял. Переформулируйте, пожалуйста, ваш запрос.
         
@@ -32,7 +32,25 @@ theme: /Service
         state: Accepted
             q: (да/давай/хорошо)
             a: Отлично!
+            go!: /Phone/Ask
             
         state: Rejected
             q: (нет/не надо)
             a: Боюсь, что ничего другого я пока предложить не могу.
+            
+theme: /Phone
+    
+    state: Ask || modal = true
+        a: Для продолжения напишите, пожалуйста, ваш номер телефона в формате 79000000000
+        
+        state: GetPhone
+            q: 79000000000 
+            a: Спасибо.
+            go!: /Phone/Ok
+                
+        state: LocalCatchAll
+            event!: noMatch
+            a: Напишите пожалйста номер телефона.
+            
+    state: Ok
+        a: Ок
