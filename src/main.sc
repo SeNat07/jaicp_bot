@@ -55,11 +55,24 @@ theme: /Phone
         state: GetPhone
             q: $phone 
             a: Спасибо.
-            go!: /Phone/Ok
+            script:
+                log("@@@@" + toPrettyString($parseTree));
+            #a: {{$parseTree._phone}}
+            go!: /Phone/Confirm
                 
         state: LocalCatchAll
             event!: noMatch
             a: Напишите пожалйста номер телефона.
             
-    state: Ok
-        a: Ок
+    state: Confirm
+        script:
+            $temp.phone = $parseTree._phone;
+        a: Ваш номер телефона {{$temp.phone}}, верно?
+        
+        state: Yes
+            q: (да/давай/хорошо)
+            a: Отлично!
+            
+        state: No
+            q: (нет/не надо)
+            a: Bad
