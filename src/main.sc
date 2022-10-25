@@ -24,6 +24,7 @@ theme: /
 theme: /Service
     
     state: SuggestHelp
+        q: отмена || fromState = /Phone/Ask
         a: Давайте я помогу вам купить билеты на самолет, хорошо?
         buttons:
             "Да"
@@ -42,6 +43,8 @@ theme: /Phone
     
     state: Ask || modal = true
         a: Для продолжения напишите, пожалуйста, ваш номер телефона в формате 79000000000
+        buttons:
+            "Отмена"
         
         state: GetPhone
             q: 79000000000 
