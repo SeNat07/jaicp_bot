@@ -1,13 +1,16 @@
 require: slotfilling/slotFilling.sc
   module = sys.zb-common
 
+require: patterns.sc
+  module = sys.zb-common
+
 require: localPatterns.sc
 
 theme: /
 
     state: Start
         q!: $regex</start>
-        q: $hi
+        q: ($hi/$hello)
         random:
             a: Здравствуйте!
             a: Добрый день!
@@ -22,6 +25,9 @@ theme: /Service
     
     state: SuggestHelp
         a: Давайте я помогу вам купить билеты на самолет, хорошо?
+        buttons:
+            "Да"
+            "Нет"
         
         state: Accepted
             q: (да/давай/хорошо)
