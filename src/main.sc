@@ -15,6 +15,7 @@ theme: /
             a: Здравствуйте!
             a: Добрый день!
             a: Приветствую!
+        a: Меня зовут {{injector.botName}}.
         script:
             $response.replies = $response.replies || [];
             $response.replies.push({
@@ -23,6 +24,12 @@ theme: /
                 text: "Аэропорт"})
         go!: /Service/SuggestHelp
 
+    state: Reset
+        q!: $regex</reset>
+        script: 
+            $client = {};
+            $session = {};
+    
     state: NoMatch || noContext = true
         event!: noMatch
         a: Простите, я не понял. Переформулируйте, пожалуйста, ваш запрос.
@@ -39,7 +46,10 @@ theme: /Service
         state: Accepted
             q: (да/давай/хорошо)
             a: Отлично!
-            go!: /Phone/Ask
+            if: $client.phone
+                go!: /Phone/Confirm
+            else:
+                go!: /Phone/Ask
             
         state: Rejected
             q: (нет/не надо)
@@ -66,13 +76,15 @@ theme: /Phone
             
     state: Confirm
         script:
-            $temp.phone = $parseTree._phone;
-        a: Ваш номер телефона {{$temp.phone}}, верно?
+            $session.probablyPhone = $parseTree._phone || $client.phone;
+        a: Ваш номер телефона {{$session.probablyPhone}}, верно?
         
         state: Yes
             q: (да/давай/хорошо)
-            a: Отлично!
+            script:
+                $client.phone = $session.probablyPhone;
+            a: Хорошо
             
         state: No
             q: (нет/не надо)
-            a: Bad
+            go: /Phone/Ask
