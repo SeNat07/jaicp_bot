@@ -15,6 +15,12 @@ theme: /
             a: Здравствуйте!
             a: Добрый день!
             a: Приветствую!
+        script:
+            $response.replies = $response.replies || [];
+            $response.replies.push({
+                type: "image",
+                imageUrl: "https://st.depositphotos.com/1144687/3421/i/600/depositphotos_34217943-stock-photo-airport-interior.jpg",
+                text: "Аэропорт"})
         go!: /Service/SuggestHelp
 
     state: NoMatch || noContext = true
@@ -47,7 +53,7 @@ theme: /Phone
             "Отмена"
         
         state: GetPhone
-            q: 79000000000 
+            q: $phone 
             a: Спасибо.
             go!: /Phone/Ok
                 
