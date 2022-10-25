@@ -18,18 +18,6 @@ theme: /
             q: (нет/не надо)
             a: Боюсь, что ничего другого я пока предложить не могу.
 
-    state: Hello
-        intent!: /привет
-        a: Привет привет
-
-    state: Bye
-        intent!: /пока
-        a: Пока пока
-
     state: NoMatch
         event!: noMatch
         a: Простите, я не понял. Переформулируйте, пожалуйста, ваш запрос.
-
-    state: Match
-        event!: match
-        a: {{$context.intent.answer}}
