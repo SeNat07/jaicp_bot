@@ -85,13 +85,27 @@ theme: /Phone
         script:
             $session.probablyPhone = $parseTree._phone || $client.phone;
         a: Ваш номер телефона {{$session.probablyPhone}}, верно?
+        buttons:
+            "Да"
+            "Нет"
         
         state: Yes
             q: (да/давай/хорошо)
             script:
                 $client.phone = $session.probablyPhone;
             a: Хорошо
+            go!: /Discount/Inform
             
         state: No
             q: (нет/не надо)
             go: /Phone/Ask
+            
+theme: /Discount
+    
+    state: Inform
+        script:
+            $temp.date = $jsapi.dateForZone("Europe/Moscow","dd.MM");
+            
+            var answer = "Вам крупно повезло."
+            $reactions.answer(answer);
+        a: Сегодня {{ $temp.date }} у нас скидка 5%
