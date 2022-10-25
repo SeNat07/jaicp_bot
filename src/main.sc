@@ -6,8 +6,13 @@ require: patterns.sc
 
 require: localPatterns.sc
 
+init:
+    bind("postProcess", function($context){
+        log("+++++++" + $context.currentState)
+    });
+        
 theme: /
-
+    
     state: Start
         q!: $regex</start>
         q: ($hi/$hello)
@@ -15,7 +20,7 @@ theme: /
             a: Здравствуйте!
             a: Добрый день!
             a: Приветствую!
-        a: Меня зовут {{injector.botName}}.
+        a: Меня зовут {{ capitalize($injector.botName) }}.
         script:
             $response.replies = $response.replies || [];
             $response.replies.push({
