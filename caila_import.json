@@ -1,22 +1,23 @@
 {
   "project" : {
-    "id" : "sedyh_bot-1000025114-EDC",
-    "name" : "sedyh_bot-1000025114-EDC",
+    "id" : "bot_sedykh-1000025114-sik",
+    "name" : "bot_sedykh-1000025114-sik",
     "folder" : "/jaicp"
   },
   "settings" : {
     "language" : "ru",
-    "spellingCorrection" : false,
+    "spellingCorrection" : true,
     "classificationAlgorithm" : "sts",
     "timezone" : "Europe/Moscow",
     "extendedSettings" : {
       "tokenizerEngine" : "mystem",
+      "allowedPatterns" : [ "Agent" ],
       "useShared" : false
     },
     "shared" : false
   },
   "intents" : [ {
-    "id" : 13108257,
+    "id" : 13170254,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -28,7 +29,7 @@
     },
     "priority" : 0
   }, {
-    "id" : 13108258,
+    "id" : 13170255,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
@@ -39,13 +40,163 @@
       "refs" : [ ]
     },
     "priority" : 0
+  }, {
+    "id" : 13171345,
+    "path" : "/Operator",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "позови оператора"
+    }, {
+      "text" : "мне нужен человек"
+    }, {
+      "text" : "мне нужен @Agent"
+    }, {
+      "text" : "позови @Agent"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 13171437,
+    "path" : "/Departure",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 13171462,
+    "path" : "/Ticket",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "хочу полететь в @Destination из @Departure"
+    }, {
+      "text" : "хочу полететь в @Departure"
+    }, {
+      "text" : "купить билет"
+    }, {
+      "text" : "хочу билетик"
+    }, {
+      "text" : "* ~билет *"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
   } ],
-  "entities" : [ ],
-  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
+  "entities" : [ {
+    "entity" : {
+      "id" : 200642,
+      "name" : "Agent",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "id" : 15590182,
+      "type" : "pattern",
+      "rule" : [ "~агент" ],
+      "value" : ""
+    }, {
+      "id" : 15590183,
+      "type" : "synonyms",
+      "rule" : [ "оператор", "сотрудник" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "id" : 200146,
+      "name" : "Animal",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "id" : 15590184,
+      "type" : "synonyms",
+      "rule" : [ "большой хомяк" ],
+      "value" : ""
+    }, {
+      "id" : 15590185,
+      "type" : "synonyms",
+      "rule" : [ "кошка", "кот" ],
+      "value" : ""
+    }, {
+      "id" : 15590186,
+      "type" : "synonyms",
+      "rule" : [ "лысый кошка" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "id" : 200645,
+      "name" : "Departure",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "id" : 15598382,
+      "type" : "pattern",
+      "rule" : [ "@pymorphy.geox" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "id" : 200650,
+      "name" : "Destination",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "id" : 15598383,
+      "type" : "pattern",
+      "rule" : [ "@pymorphy.geox" ],
+      "value" : ""
+    } ]
+  } ],
+  "enabledSystemEntities" : [ "mystem.geo", "pymorphy.geox", "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
   "spellerDictionary" : [ ],
   "systemEntities" : [ {
     "name" : "mystem.geo",
-    "enabled" : false
+    "enabled" : true
   }, {
     "name" : "mystem.persn",
     "enabled" : false
@@ -84,7 +235,7 @@
     "enabled" : false
   }, {
     "name" : "pymorphy.geox",
-    "enabled" : false
+    "enabled" : true
   }, {
     "name" : "pymorphy.orgn",
     "enabled" : false
