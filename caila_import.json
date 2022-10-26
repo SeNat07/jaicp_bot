@@ -305,24 +305,26 @@
     "path" : "/KnowledgeBase/FAQ.Контакты",
     "enabled" : true,
     "shared" : false,
+    "phrases" : [ ],
     "classificationRules" : {
       "refs" : [ ]
     },
     "priority" : 0
   }, {
-    "id" : 13172291,
-    "path" : "/Return",
+    "id" : 13169318,
+    "path" : "/Пробемы в мобильном приложении",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
-      "text" : "оформить возврат"
+      "text" : "Не могу совершить перевод на карту другого банка, вылетает ошибка и операция не выполнена"
     }, {
-      "text" : "вернуть билет"
+      "text" : "Не могу в приложении перевести средства между своими считами."
+    }, {
+      "text" : "Не могу сделать платеж в моб приложении"
     } ],
     "classificationRules" : {
       "refs" : [ ]
     },
-    "patterns" : [ ],
     "priority" : 0
   }, {
     "id" : 13169283,
@@ -342,6 +344,63 @@
       "text" : "вы есть не в Москве?"
     }, {
       "text" : "В каких городах есть офисы?"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 13175278,
+    "path" : "/Новый интент 1",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "priority" : 0
+  }, {
+    "id" : 13169320,
+    "path" : "/Новый интент 2",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "priority" : 0
+  }, {
+    "id" : 13175078,
+    "path" : "/Как активировать карту",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Как активировать карту через банк онлайн??"
+    }, {
+      "text" : "Как активировать карту в банкомате?"
+    }, {
+      "text" : "Как активировать карту без банкомата"
+    }, {
+      "text" : "Как мне активировать карту если был перевыпуск в связи со сменой фамилии?"
+    }, {
+      "text" : "Добрый день. Как я могу активировать свою карту?"
+    }, {
+      "text" : "Добрый день, Олег. Как я могу активировать свою карту?"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "priority" : 0
+  }, {
+    "id" : 13172291,
+    "path" : "/Return",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "оформить возврат"
+    }, {
+      "text" : "вернуть билет"
     } ],
     "classificationRules" : {
       "refs" : [ ]

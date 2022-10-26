@@ -114,9 +114,14 @@ theme: /Discount
         
 theme: /Travel
     
-    #state: Ticket
-        #intent!: /Ticket
-        #a: Вы хотите купить билет, я поняла.
+    state: Ticket
+        intent!: /Ticket
+        script:
+            log("ssssssssssssssssss" + toPrettyString($parseTree));
+            $session.departureCity = capitalize($nlp.inflect($parseTree._departure, "gent"));
+            $session.destinationCity = capitalize($nlp.inflect($parseTree._destination, "accs"));
+            $session.time = $parseTree._time.day + "/" + $parseTree._time.month + "/" + $parseTree._time.year;
+        a: Вы хотите купить билет из {{$session.departureCity}} в {{$session.destinationCity}} {{$session.time}}.
         
     state: Match
         event!: match
