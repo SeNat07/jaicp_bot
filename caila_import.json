@@ -111,6 +111,205 @@
     } ],
     "priority" : 0
   }, {
+    "id" : 13169281,
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/Какой у вас номер телефона?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "как вам позвонить"
+    }, {
+      "text" : "номер телефона"
+    }, {
+      "text" : "какой телефон"
+    }, {
+      "text" : "по какому номеру могу связаться?"
+    }, {
+      "text" : "нужен контактный номер телефона"
+    }, {
+      "text" : "скажите ваши контакты"
+    }, {
+      "text" : "Какой у вас номер телефона?"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 13169282,
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/Где вы находитесь?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "какой у вас адрес"
+    }, {
+      "text" : "по какому адресу вы расположены"
+    }, {
+      "text" : "Где вы находитесь?"
+    }, {
+      "text" : "как к вам подъехать"
+    }, {
+      "text" : "какой адрес главного офиса"
+    }, {
+      "text" : "где головное отделение"
+    }, {
+      "text" : "узнать месторасположение"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 13169284,
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/Как связаться со службой поддержки?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "номер службы поддержки"
+    }, {
+      "text" : "позвонить в службу заботы о клиентах"
+    }, {
+      "text" : "телефон горячей линии"
+    }, {
+      "text" : "куда звонить чтобы оставить жалобу"
+    }, {
+      "text" : "скажите телефон службы поддержки"
+    }, {
+      "text" : "Контакты горячей линии"
+    }, {
+      "text" : "Как связаться со службой поддержки?"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 13169285,
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/По каким дням вы работаете?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "По каким дням вы работаете?"
+    }, {
+      "text" : "дни работы офисов"
+    }, {
+      "text" : "рабочие дни"
+    }, {
+      "text" : "к вам можно подъехать на выходных"
+    }, {
+      "text" : "по каким дням недели вы открыты"
+    }, {
+      "text" : "график работы"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 13169286,
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/Как вас найти в интернете?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Как вас найти в интернете?"
+    }, {
+      "text" : "вы есть в соцсетях"
+    }, {
+      "text" : "инстаграм компании"
+    }, {
+      "text" : "телеграм канал компании"
+    }, {
+      "text" : "дайте ссылку на аккаунт"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 13169287,
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/Есть ли у вас мобильное приложение?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "скачать мобильное приложение"
+    }, {
+      "text" : "вы есть в google play"
+    }, {
+      "text" : "вас можно найти в app store"
+    }, {
+      "text" : "в формате приложения"
+    }, {
+      "text" : "удобнее через приложение"
+    }, {
+      "text" : "Есть ли приложение на телефон?"
+    }, {
+      "text" : "Есть ли у вас мобильное приложение?"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 13169288,
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/Какая у вас электронная почта?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "адрес электронной почты"
+    }, {
+      "text" : "как написать вам на почту"
+    }, {
+      "text" : "какая у вас почта"
+    }, {
+      "text" : "подскажите емейл"
+    }, {
+      "text" : "Какая у вас электронная почта?"
+    }, {
+      "text" : "отправить письмо на электронку"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 13169289,
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/Хочу сотрудничать",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "куда обращаться по вопросам сотрудничества"
+    }, {
+      "text" : "Хочу сотрудничать"
+    }, {
+      "text" : "Есть бизнес предложение"
+    }, {
+      "text" : "предлагаем совместный проект"
+    }, {
+      "text" : "контакты для возможных партнеров"
+    }, {
+      "text" : "есть возможность партнерства"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 13169292,
+    "path" : "/KnowledgeBase/FAQ.Контакты",
+    "enabled" : true,
+    "shared" : false,
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "priority" : 0
+  }, {
     "id" : 13172291,
     "path" : "/Return",
     "enabled" : true,
@@ -119,6 +318,80 @@
       "text" : "оформить возврат"
     }, {
       "text" : "вернуть билет"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 13169283,
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/В каких городах есть офисы?",
+    "answer" : "Во всех городах есть офисы!",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "в каких регионах у вас есть филиалы"
+    }, {
+      "text" : " вы открыты в разных городах"
+    }, {
+      "text" : "в каких городах можно вас найти"
+    }, {
+      "text" : "в каких регионах вы представлены"
+    }, {
+      "text" : "вы есть не в Москве?"
+    }, {
+      "text" : "В каких городах есть офисы?"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 13169291,
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/В каких странах есть офисы?",
+    "answer" : "Вездеее!",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "в каких странах открыты ваши офисы"
+    }, {
+      "text" : "страны где вы представлены"
+    }, {
+      "text" : "где есть представительства в мире"
+    }, {
+      "text" : "международные филиалы"
+    }, {
+      "text" : "где офисы за границей"
+    }, {
+      "text" : "В каких странах есть офисы?"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 13169290,
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/В какое время вы работаете?",
+    "answer" : "Всегдааа!",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "вы открыты ночью"
+    }, {
+      "text" : "в какие часы работаете"
+    }, {
+      "text" : "рабочие часы"
+    }, {
+      "text" : "рабочее время"
+    }, {
+      "text" : "Часы когда вы открыты"
+    }, {
+      "text" : "в какое время можно подъехать"
+    }, {
+      "text" : "В какое время вы работаете?"
     } ],
     "classificationRules" : {
       "refs" : [ ]
@@ -185,48 +458,6 @@
     } ]
   }, {
     "entity" : {
-      "id" : 200660,
-      "name" : "classRule_1801",
-      "enabled" : true,
-      "shared" : false,
-      "type" : "annotation",
-      "priority" : 1,
-      "noSpelling" : false,
-      "noMorph" : false,
-      "phoneticSearch" : false,
-      "fuzzySearch" : false,
-      "client" : false,
-      "hidden" : true
-    },
-    "records" : [ {
-      "id" : 15590656,
-      "type" : "pattern",
-      "rule" : [ "{~вернуть билет*}" ],
-      "value" : ""
-    } ]
-  }, {
-    "entity" : {
-      "id" : 200206,
-      "name" : "classRule_2827",
-      "enabled" : true,
-      "shared" : false,
-      "type" : "annotation",
-      "priority" : 1,
-      "noSpelling" : false,
-      "noMorph" : false,
-      "phoneticSearch" : false,
-      "fuzzySearch" : false,
-      "client" : false,
-      "hidden" : true
-    },
-    "records" : [ {
-      "id" : 15590655,
-      "type" : "pattern",
-      "rule" : [ "{~вернуть бил}" ],
-      "value" : ""
-    } ]
-  }, {
-    "entity" : {
       "id" : 200193,
       "name" : "classRule_3010",
       "enabled" : true,
@@ -244,85 +475,6 @@
       "id" : 15590648,
       "type" : "synonyms",
       "rule" : [ "возврат" ],
-      "value" : ""
-    } ]
-  }, {
-    "entity" : {
-      "id" : 200205,
-      "name" : "classRule_461",
-      "enabled" : true,
-      "shared" : false,
-      "type" : "annotation",
-      "priority" : 1,
-      "noSpelling" : false,
-      "noMorph" : false,
-      "phoneticSearch" : false,
-      "fuzzySearch" : false,
-      "client" : false,
-      "hidden" : true
-    },
-    "records" : [ {
-      "id" : 15590654,
-      "type" : "pattern",
-      "rule" : [ "{~вернк}" ],
-      "value" : ""
-    } ]
-  }, {
-    "entity" : {
-      "id" : 200204,
-      "name" : "classRule_6422",
-      "enabled" : true,
-      "shared" : false,
-      "type" : "annotation",
-      "priority" : 1,
-      "noSpelling" : false,
-      "noMorph" : false,
-      "phoneticSearch" : false,
-      "fuzzySearch" : false,
-      "client" : false,
-      "hidden" : true
-    },
-    "records" : [ ]
-  }, {
-    "entity" : {
-      "id" : 200207,
-      "name" : "classRule_6431",
-      "enabled" : true,
-      "shared" : false,
-      "type" : "annotation",
-      "priority" : 1,
-      "noSpelling" : false,
-      "noMorph" : false,
-      "phoneticSearch" : false,
-      "fuzzySearch" : false,
-      "client" : false,
-      "hidden" : true
-    },
-    "records" : [ {
-      "id" : 15602942,
-      "type" : "pattern",
-      "rule" : [ "{~вернуть билет}" ],
-      "value" : ""
-    } ]
-  }, {
-    "entity" : {
-      "id" : 200659,
-      "name" : "classRule_781",
-      "enabled" : true,
-      "shared" : false,
-      "type" : "annotation",
-      "priority" : 1,
-      "noSpelling" : false,
-      "noMorph" : false,
-      "phoneticSearch" : false,
-      "fuzzySearch" : false,
-      "client" : false,
-      "hidden" : true
-    },
-    "records" : [ {
-      "id" : 15602941,
-      "type" : "pattern",
-      "rule" : [ "{}" ],
       "value" : ""
     } ]
   }, {

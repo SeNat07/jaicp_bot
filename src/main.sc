@@ -114,6 +114,10 @@ theme: /Discount
         
 theme: /Travel
     
-    state: Ticket
-        intent!: /Ticket
-        a: Вы хотите купить билет, я поняла.
+    #state: Ticket
+        #intent!: /Ticket
+        #a: Вы хотите купить билет, я поняла.
+        
+    state: Match
+        event!: match
+        a: Знаю ответ:{{$context.intent.answer}}       
