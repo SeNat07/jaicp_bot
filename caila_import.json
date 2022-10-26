@@ -84,7 +84,41 @@
     }, {
       "text" : "хочу билетик"
     }, {
-      "text" : "* ~билет *"
+      "text" : "хочу билет"
+    } ],
+    "classificationRules" : {
+      "refs" : [ {
+        "entityName" : "classRule_3010",
+        "predicate" : "CONTAINS_NOT"
+      } ]
+    },
+    "patterns" : [ "* ~билет *" ],
+    "slots" : [ {
+      "name" : "departure",
+      "entity" : "Departure",
+      "required" : true,
+      "prompts" : [ "Откуда вы хотите лететь?" ]
+    }, {
+      "name" : "destination",
+      "entity" : "Destination",
+      "required" : true,
+      "prompts" : [ "Куда вы хотите лететь?", "В какой город летите?" ]
+    }, {
+      "name" : "time",
+      "entity" : "duckling.time",
+      "required" : true,
+      "prompts" : [ "Когда летим?", "На какой день брать билет?" ]
+    } ],
+    "priority" : 0
+  }, {
+    "id" : 13172291,
+    "path" : "/Return",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "оформить возврат"
+    }, {
+      "text" : "вернуть билет"
     } ],
     "classificationRules" : {
       "refs" : [ ]
@@ -147,6 +181,148 @@
       "id" : 15590186,
       "type" : "synonyms",
       "rule" : [ "лысый кошка" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "id" : 200660,
+      "name" : "classRule_1801",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : true
+    },
+    "records" : [ {
+      "id" : 15590656,
+      "type" : "pattern",
+      "rule" : [ "{~вернуть билет*}" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "id" : 200206,
+      "name" : "classRule_2827",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : true
+    },
+    "records" : [ {
+      "id" : 15590655,
+      "type" : "pattern",
+      "rule" : [ "{~вернуть бил}" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "id" : 200193,
+      "name" : "classRule_3010",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : true
+    },
+    "records" : [ {
+      "id" : 15590648,
+      "type" : "synonyms",
+      "rule" : [ "возврат" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "id" : 200205,
+      "name" : "classRule_461",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : true
+    },
+    "records" : [ {
+      "id" : 15590654,
+      "type" : "pattern",
+      "rule" : [ "{~вернк}" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "id" : 200204,
+      "name" : "classRule_6422",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : true
+    },
+    "records" : [ ]
+  }, {
+    "entity" : {
+      "id" : 200207,
+      "name" : "classRule_6431",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : true
+    },
+    "records" : [ {
+      "id" : 15602942,
+      "type" : "pattern",
+      "rule" : [ "{~вернуть билет}" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "id" : 200659,
+      "name" : "classRule_781",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : true
+    },
+    "records" : [ {
+      "id" : 15602941,
+      "type" : "pattern",
+      "rule" : [ "{}" ],
       "value" : ""
     } ]
   }, {
