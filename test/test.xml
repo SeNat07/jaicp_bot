@@ -1,2 +1,88 @@
-<test>
+<test integration = "true">
+    
+    <mockData> 
+        <query method="get">
+             http://api.openweathermap.org/data/2.5/weather?appid=${appid}&amp;lang=${lang}&amp;units=${units}&amp;lat=${lat}&amp;lon=${lon}
+        </query>
+        <parametrs>
+            <appid>fb6e5c88b0a5149cea3010f4fd356a91</appid>
+            <lang>ru</lang>
+            <units>metric</units>
+            <lat>59.93863</lat>
+            <lon>30.31413</lon>
+        </parametrs>
+        <response type="json" status="200">
+            { 
+                "weather":[{
+                    "id":804,
+                    "main":"Clouds",
+                    "description":"пасмурно",
+                    "icon":"04d"
+                }],
+                
+                "main":{
+                    "temp":10.05,
+                    "feels_like":9.38,
+                    "temp_min":10.05,
+                    "temp_max":10.06,
+                    "pressure":1017,
+                    "humidity":87
+                }
+            }
+        </response>
+    </mockData>
+    
+    <test-case>
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/Service/SuggestHelp"/>
+        <responseData field="replies[4].buttons">
+            [{text: "Да"},{text: "Нет"}]
+        </responseData>
+        <q>Да</q>
+        <a state="/Service/SuggestHelp/Accepted"/>
+        <a state="/Phone/Ask"/>
+        <q>79856856856</q>
+        <a state="/Phone/Ask/GetPhone"/>
+        <a state="/Phone/Confirm"/>
+        <dateTime>2022-10-27 10:00:00</dateTime>
+        <q>Да</q>
+        <a state="/Phone/Confirm/Yes"/>
+        <a state="/Discount/Inform"/>
+        <a state="/Discount/Inform">Xnj-nj ppfxtv-nj</a>
+        <a state="/Travel/Departure"/>
+    </test-case>
+    
+    <test-case>
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/Service/SuggestHelp"/>
+        <context var="client">
+            {"phone": "79856856856"}
+        </context>
+        <q>Да</q>
+        <a state="/Service/SuggestHelp/Accepted"/>
+        <a state="/Phone/Confirm"/>
+        <dateTime>2022-10-27 10:00:00</dateTime>
+        <q>Да</q>
+        <a state="/Phone/Confirm/Yes"/>
+        <a state="/Discount/Inform"/>
+        <a state="/Discount/Inform">Xnj-nj ppfxtv-nj</a>
+        <a state="/Travel/Departure"/>
+    </test-case>
+    
+    <test-case>
+        <state>Travel/Departure</state>
+        <q>мск</q>
+        <a state="/Travel/Departure/Get">итак, город отправления: Москва</a>
+        <a state="/Travel/Destination"/>
+        <q>париж</q>
+        <a state="/Travel/Destination/Get">итак, город прибытия: Париж</a>
+        <a state="/Weather/Current"/>
+    </test-case>
+    
+    
+    
 </test>    

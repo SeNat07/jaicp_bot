@@ -179,4 +179,4 @@ theme: /Weather
         script:
             $temp.weather = getCurrentWeather($session.destinationCity.lat, $session.destinationCity.lon);
         if: $temp.weather
-            a: Сейчас в городе {{$session.destinationCity.name}} {{$temp.weather.descr}}, {{$temp.weather.temp}}C
+            a: Сейчас в городе {{$session.destinationCity.name}} {{$temp.weather.descr}}, {{$temp.weather.temp}}С
