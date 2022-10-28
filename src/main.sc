@@ -42,11 +42,13 @@ theme: /
             a: Приветствую!
         a: Меня зовут {{ capitalize($injector.botName) }}.
         script:
-            $response.replies = $response.replies || [];
-            $response.replies.push({
-                type: "image",
-                imageUrl: "https://st.depositphotos.com/1144687/3421/i/600/depositphotos_34217943-stock-photo-airport-interior.jpg",
-                text: "Аэропорт"})
+            if ($request.channelType === "telegram"){
+                $response.replies = $response.replies || [];
+                $response.replies.push({
+                    type: "image",
+                    imageUrl: "https://st.depositphotos.com/1144687/3421/i/600/depositphotos_34217943-stock-photo-airport-interior.jpg",
+                    text: "Аэропорт"})
+            }
         go!: /Service/SuggestHelp
 
     state: Reset
